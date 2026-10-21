@@ -18,17 +18,18 @@ import {
   Cpu,
   Trophy,
   UploadCloud,
-  ChevronDown,
+  PlayCircle,
 } from 'lucide-react';
 
 const navItems = [
   { href: '/', label: 'Accueil', shortDesc: 'Hub', icon: Sparkles },
-  { href: '/data-cleaning', label: 'Nettoyage des Données', shortDesc: 'Préparation', icon: Database },
+  { href: '/scenario', label: 'Scénario A à Z', shortDesc: 'Upload ➔ Fin', icon: PlayCircle, highlight: true },
+  { href: '/data-lab', label: 'Mon Lab Data', shortDesc: 'AutoML', icon: UploadCloud },
+  { href: '/data-cleaning', label: 'Nettoyage', shortDesc: 'Préparation', icon: Database },
   { href: '/machine-learning', label: 'Machine Learning', shortDesc: 'Algorithmes', icon: LineChart },
-  { href: '/deep-learning', label: 'Réseaux de Neurones', shortDesc: 'Cerveau & Poids', icon: Brain },
-  { href: '/cnn-from-scratch', label: 'Vision & Images (CNN)', shortDesc: 'Convolution 3D', icon: Layers },
+  { href: '/deep-learning', label: 'Réseaux de Neurones', shortDesc: 'Cerveau 3D', icon: Brain },
+  { href: '/cnn-from-scratch', label: 'Vision (CNN 3D)', shortDesc: 'Convolution', icon: Layers },
   { href: '/evaluation', label: 'Tester & Mesurer', shortDesc: 'Métriques', icon: Target },
-  { href: '/data-lab', label: 'Mon Lab : Upload & Entraînement', shortDesc: 'AutoML', icon: UploadCloud, highlight: true },
   { href: '/playground', label: 'Jeux & Quiz', shortDesc: 'Défis', icon: Gamepad2 },
 ];
 
@@ -71,7 +72,7 @@ export default function Navbar() {
                     isActive
                       ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
                       : item.highlight
-                      ? 'bg-gradient-to-r from-cyan-500/15 to-violet-500/15 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/25'
+                      ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/30'
                       : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                   }`}
                 >
@@ -80,40 +81,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-          </nav>
-
-          {/* Medium Screen Navigation (Compact Dropdown / Key Links) */}
-          <nav className="hidden md:flex xl:hidden items-center space-x-2">
-            <Link
-              href="/data-cleaning"
-              className={`px-2.5 py-1.5 rounded-lg text-xs font-medium ${pathname === '/data-cleaning' ? 'text-cyan-400 bg-slate-800' : 'text-slate-300'}`}
-            >
-              Données
-            </Link>
-            <Link
-              href="/machine-learning"
-              className={`px-2.5 py-1.5 rounded-lg text-xs font-medium ${pathname === '/machine-learning' ? 'text-cyan-400 bg-slate-800' : 'text-slate-300'}`}
-            >
-              ML
-            </Link>
-            <Link
-              href="/deep-learning"
-              className={`px-2.5 py-1.5 rounded-lg text-xs font-medium ${pathname === '/deep-learning' ? 'text-cyan-400 bg-slate-800' : 'text-slate-300'}`}
-            >
-              Neurones
-            </Link>
-            <Link
-              href="/cnn-from-scratch"
-              className={`px-2.5 py-1.5 rounded-lg text-xs font-medium ${pathname === '/cnn-from-scratch' ? 'text-cyan-400 bg-slate-800' : 'text-slate-300'}`}
-            >
-              CNN 3D
-            </Link>
-            <Link
-              href="/data-lab"
-              className="px-2.5 py-1.5 rounded-lg text-xs font-bold text-cyan-300 bg-cyan-950/70 border border-cyan-500/40"
-            >
-              ⚡ Mon Lab
-            </Link>
           </nav>
 
           {/* Right Action Bar (XP & Mode Toggle) */}
@@ -188,7 +155,7 @@ export default function Navbar() {
                     isActive
                       ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
                       : item.highlight
-                      ? 'bg-gradient-to-r from-cyan-950/80 to-violet-950/80 border border-cyan-500/30 text-cyan-300'
+                      ? 'bg-gradient-to-r from-cyan-950/80 to-blue-950/80 border border-cyan-500/30 text-cyan-300'
                       : 'text-slate-300 hover:text-white hover:bg-slate-800'
                   }`}
                 >
