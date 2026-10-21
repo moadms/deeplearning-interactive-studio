@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Sparkles, BookOpen, GitBranch, ShieldCheck } from 'lucide-react';
+import { Brain, Sparkles, BookOpen, GitBranch, ShieldCheck, UploadCloud } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,11 +12,11 @@ export default function Footer() {
             <span className="font-bold text-white text-base">NeuroLearn Studio</span>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Plateforme interactive et immersive dédiée à l’apprentissage du Machine Learning & Deep Learning : du nettoyage de données aux architectures CNN from scratch.
+            Plateforme interactive et immersive conçue pour le module universitaire Deep Learning : du nettoyage de données aux modèles 3D et à l'auto-entraînement en ligne.
           </p>
           <div className="flex items-center space-x-2 text-xs text-cyan-400">
             <Sparkles className="w-4 h-4" />
-            <span>Interactive 2D & 3D Web Engine</span>
+            <span>Moteur 3D Three.js & Algorithmes From Scratch</span>
           </div>
         </div>
 
@@ -27,47 +27,52 @@ export default function Footer() {
               <Link href="/data-cleaning" className="hover:text-cyan-400 transition-colors">Nettoyage & Data Studio</Link>
             </li>
             <li>
-              <Link href="/data-cleaning#scaling" className="hover:text-cyan-400 transition-colors">Normalisation & Standardisation</Link>
+              <Link href="/machine-learning" className="hover:text-cyan-400 transition-colors">Machine Learning 2D & 3D</Link>
             </li>
             <li>
-              <Link href="/data-cleaning#balancing" className="hover:text-cyan-400 transition-colors">Équilibrage SMOTE & Resampling</Link>
+              <Link href="/deep-learning" className="hover:text-cyan-400 transition-colors">Réseaux de Neurones Détaillés</Link>
             </li>
             <li>
-              <Link href="/machine-learning" className="hover:text-cyan-400 transition-colors">Classification & Régression</Link>
+              <Link href="/cnn-from-scratch" className="hover:text-cyan-400 transition-colors">Vision & Images (CNN 3D)</Link>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-3">Deep Learning & 3D</h4>
+          <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-3">Pratique & AutoML</h4>
           <ul className="space-y-2 text-xs">
             <li>
-              <Link href="/deep-learning" className="hover:text-cyan-400 transition-colors">Cerveau Humain vs Réseau Artificiel</Link>
-            </li>
-            <li>
-              <Link href="/deep-learning#activations" className="hover:text-cyan-400 transition-colors">Fonctions d’Activation & Problèmes</Link>
-            </li>
-            <li>
-              <Link href="/cnn-from-scratch" className="hover:text-cyan-400 transition-colors">CNN Convolution & Pooling 3D</Link>
+              <Link href="/data-lab" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1">
+                <UploadCloud className="w-3.5 h-3.5" />
+                <span>Mon Lab : Upload & Modèles</span>
+              </Link>
             </li>
             <li>
               <Link href="/evaluation" className="hover:text-cyan-400 transition-colors">Matrice de Confusion & Validation</Link>
             </li>
+            <li>
+              <Link href="/playground" className="hover:text-cyan-400 transition-colors">L'Arène des Jeux & Quiz</Link>
+            </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-3">Pratique & Défis</h4>
+          <h4 className="text-xs font-semibold text-white uppercase tracking-wider mb-3">Code & Open-Source</h4>
           <ul className="space-y-2 text-xs">
             <li>
-              <Link href="/playground" className="hover:text-cyan-400 transition-colors">L’Arène des Algorithmes (Mini-Jeux)</Link>
-            </li>
-            <li>
-              <Link href="/playground#quiz" className="hover:text-cyan-400 transition-colors">Quiz Certifiant & Évaluation</Link>
+              <a
+                href="https://github.com/moadms/deeplearning-interactive-studio"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
+              >
+                <GitBranch className="w-3.5 h-3.5" />
+                <span>Dépôt GitHub (moadms)</span>
+              </a>
             </li>
             <li className="pt-2 text-[11px] text-slate-500 flex items-center space-x-1">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Conçu pour le module universitaire Deep Learning</span>
+              <span>Conforme aux exigences académiques</span>
             </li>
           </ul>
         </div>
